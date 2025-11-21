@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Piezas en 3D — Print Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="Logo.png">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="container header-inner">
+    <div class="brand">Print <span>Lab</span></div>
+    <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="mdf.html">Piezas en MDF</a>
+        <a href="3d.html" class="active">Piezas en 3D</a>
+        
+    </nav>
+    <!-- Botón modo oscuro -->
+    <button id="themeToggle" class="theme-toggle" type="button">
+    <span class="theme-toggle-icon">🌙</span>
+    <span class="theme-toggle-label">Modo oscuro</span>
+    </button>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO 3D -->
+    <section class="hero" id="inicio">
+    <div class="container hero-inner">
+        <div class="hero-copy">
+        <h1>Piezas personalizadas en 3D</h1>
+        <p>
+            Diseñamos y fabricamos piezas en impresión 3D para proyectos creativos, prototipos, promocionales
+            y proyectos escolares. Explora nuestros catálogos y encuentra el estilo perfecto para tu idea.
+        </p>
+        </div>
+        <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+            alt="Impresora 3D en funcionamiento">
+        </div>
+    </div>
+    </section>
+
+    <!-- CATÁLOGOS 3D -->
+    <section class="section">
+    <div class="container">
+        <div class="section-head">
+        <h2>Catálogos y ejemplos en 3D</h2>
+        <p class="muted">
+            Filtra por tipo de pieza y revisa ejemplos de lo que podemos fabricar en impresión 3D.
+        </p>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filters">
+        <input id="q" type="search" placeholder="Buscar por nombre o etiqueta…">
+        <select id="tag">
+            <option value="todas">Todas</option>
+            <option value="decoraciones">Decoraciones</option>
+            <option value="promocionales">Promocionales</option>
+            <option value="personalizables">Personalizables</option>
+            <option value="escolares">Proyectos escolares</option>
+        </select>
+        <button id="reset" class="btn btn-ghost">Restablecer</button>
+        </div>
+
+        <div class="count-row">
+        <span id="count">0 resultado(s)</span>
+        </div>
+
+        <!-- Catálogo con scroll interno -->
+        <div class="catalog-wrapper">
+        <div class="catalog-scroll">
+            <div class="grid" data-grid="mdf">
+            <!-- Producto 1 -->
+            <article class="card" data-tags="decoraciones personalizables">
+                <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80" alt="Figura decorativa 3D">
+                <div class="card-body">
+                <h3>Figuras decorativas</h3>
+                <div class="tags">
+                    <span>#decoraciones</span>
+                    <span>#personalizables</span>
+                </div>
+                <p>
+                    Figuras en 3D para escritorio, repisas o regalos especiales. Personalizables por color y tamaño.
+                </p>
+                <div class="card-foot">
+                    <span class="price">Desde Q75.00</span>
+                    <button class="btn btn-detail"
+                    data-title="Figuras decorativas 3D"
+                    data-desc="Figuras impresas en 3D, ideales para decoración de espacios, regalos personalizados y detalles únicos."
+                    data-tags="#decoraciones #personalizables"
+                    data-img="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80">
+                    Ver detalles
+                    </button>
+                </div>
+                </div>
+            </article>
+
+            <!-- Producto 2 -->
+            <article class="card" data-tags="promocionales personalizables">
+                <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?auto=format&fit=crop&w=900&q=80" alt="Piezas promocionales 3D">
+                <div class="card-body">
+                <h3>Promocionales en 3D</h3>
+                <div class="tags">
+                    <span>#promocionales</span>
+                    <span>#personalizables</span>
+                </div>
+                <p>
+                    Llaveros, stands, logotipos y piezas especiales para tu marca impresas en 3D.
+                </p>
+                <div class="card-foot">
+                    <span class="price">Desde Q60.00</span>
+                    <button class="btn btn-detail"
+                    data-title="Promocionales en 3D"
+                    data-desc="Piezas promocionales impresas en 3D: llaveros, logotipos, stands pequeños y más, personalizados con la identidad de tu marca."
+                    data-tags="#promocionales #personalizables"
+                    data-img="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?auto=format&fit=crop&w=900&q=80">
+                    Ver detalles
+                    </button>
+                </div>
+                </div>
+            </article>
+
+            <!-- Producto 3 -->
+            <article class="card" data-tags="escolares personalizables">
+                <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80" alt="Proyecto escolar 3D">
+                <div class="card-body">
+                <h3>Proyectos escolares</h3>
+                <div class="tags">
+                    <span>#escolares</span>
+                    <span>#personalizables</span>
+                </div>
+                <p>
+                    Maquetas, modelos y piezas para proyectos escolares y universitarios en impresión 3D.
+                </p>
+                <div class="card-foot">
+                    <span class="price">Desde Q85.00</span>
+                    <button class="btn btn-detail"
+                    data-title="Proyectos escolares en 3D"
+                    data-desc="Modelos, piezas y maquetas en 3D para proyectos escolares y universitarios, adaptados a tus necesidades."
+                    data-tags="#escolares #personalizables"
+                    data-img="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80">
+                    Ver detalles
+                    </button>
+                </div>
+                </div>
+            </article>
+
+            <!-- Puedes seguir agregando más productos 3D copiando y pegando estas cards -->
+
+            </div>
+
+            <div id="empty" class="empty hidden">No se encontraron resultados.</div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container footer-inner">
+    <div>2025 Print Lab</div>
+    </div>
+</footer>
+
+<!-- MODAL / VISOR -->
+<div id="modal" class="modal hidden">
+    <div class="modal-dialog">
+    <button class="modal-close">✖</button>
+    <div class="modal-grid">
+        <img id="mImg" alt="Vista de producto">
+        <div>
+        <h3 id="mTitle"></h3>
+        <p id="mDesc" class="muted"></p>
+        <div id="mTags" class="tags mt-2"></div>
+        <div class="modal-actions">
+            <a id="mPdf" class="btn btn-outline" target="_blank" style="display:none;">Ver PDF</a>
+            <a href="index.html#contacto" class="btn btn-primary">Cotizar este producto</a>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
